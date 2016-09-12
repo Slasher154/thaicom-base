@@ -1,0 +1,22 @@
+{
+  "public": {
+
+  },
+  "private": {
+    "thaicomOauth": {
+      "ipAddress": "172.11.11.11",
+      "sysName": "YourApp",
+      "apiKey": "Your API Key Here"
+    },
+    "dummyAdmin": {
+      "bu": "BU-SEN",
+      "dp": "DP-CS",
+      "email": "thanatv@thaicom.net",
+      "gender": "M",
+      "firstName": "Thanat",
+      "lastName": "Varathon",
+      "position": "EN"
+    },
+    "dummyPassword": "BirdEatsFallingBridge"
+  }
+}
