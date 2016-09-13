@@ -1,12 +1,12 @@
 {
   "public": {
-
+    "dummyPassword": "abcd1234"
   },
   "private": {
     "thaicomOauth": {
-      "ipAddress": "172.11.11.11",
-      "sysName": "YourApp",
-      "apiKey": "Your API Key Here"
+      "IP_Address": "Your Server IP Address",
+      "System": "Your System Name",
+      "APIKey": "Your API Key here"
     },
     "dummyAdmin": {
       "bu": "BU-SEN",
@@ -15,8 +15,8 @@
       "gender": "M",
       "firstName": "Thanat",
       "lastName": "Varathon",
-      "position": "EN"
-    },
-    "dummyPassword": "BirdEatsFallingBridge"
+      "position": "EN",
+      "image": ""
+    }
   }
 }
