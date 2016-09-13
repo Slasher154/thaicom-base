@@ -19,6 +19,8 @@ Meteor.methods({
             }
         }
         // If username and password is the same as first user to login, bypass the Thaicom authentication
+        // The purpose is to let us continue developing the app while the Thaicom authen access is not arrived
+        // (waiting reply from MIS, etc.)
         else if (Meteor.users.findOne({ username: username, firstUser: true })) {
             return 'Authentication success';
         }
@@ -75,10 +77,8 @@ let _authenticateWithCompanyDatabase = (username, password) => {
                 const authenResult = result.GetAuthenResult;
                 console.log(authenResult.IsSuccess);
                 if (authenResult.IsSuccess) {
-                    console.log('Success = true');
                     resolve(authenResult.EmpProfile);
                 } else {
-                    console.log('Success = false');
                     reject(authenResult.Message);
                 }
             });

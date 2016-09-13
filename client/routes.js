@@ -47,6 +47,7 @@ loggedIn.route('/logout', {
     action(){
         Meteor.logout(function(){
             FlowRouter.go('login');
+            Bert.alert('Successfully Logout', 'success', 'fixed-top');
         })
     }
 });
