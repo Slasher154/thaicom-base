@@ -1,5 +1,7 @@
 {
   "public": {
+    "createDummyAdmin": true,
+    "bypassAuthenForFirstUser": true,
     "dummyPassword": "abcd1234"
   },
   "private": {

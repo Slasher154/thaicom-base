@@ -9,7 +9,7 @@ Meteor.methods({
         check(password, String);
 
         // If this is the first user to login, generate a dummy data and make him admin
-        if (Meteor.users.find().count() === 0) {
+        if (Meteor.users.find().count() === 0 && Meteor.settings.public.createDummyAdmin) {
             try {
                 const dummyPassword = Meteor.settings.public.dummyPassword;
                 _createDummyAdmin(username, dummyPassword);
@@ -21,7 +21,7 @@ Meteor.methods({
         // If username and password is the same as first user to login, bypass the Thaicom authentication
         // The purpose is to let us continue developing the app while the Thaicom authen access is not arrived
         // (waiting reply from MIS, etc.)
-        else if (Meteor.users.findOne({ username: username, firstUser: true })) {
+        else if (Meteor.users.findOne({ username: username, firstUser: true }) && Meteor.settings.public.bypassAuthenForFirstUser) {
             return 'Authentication success';
         }
 
